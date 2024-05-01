@@ -9,5 +9,6 @@
 </head>
 <body>
     <h1>Laravel Course - View</h1>
+    <a href="{{route('aboutus',['something','abcd','efgh'])}}">lalala</a> <!-- sending get data -->
 </body>
 </html>
