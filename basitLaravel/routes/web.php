@@ -2,6 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Test;
+use App\Http\Controllers\RequestLibrary;
+
+Route::get('/contact',[RequestLibrary::class,'contact']);
+Route::post('/contact',[RequestLibrary::class,'post'])->name('contact.post');
+
+
+
+
 
 Route::get('/',[Test::class,'index'])->name('homepage'); // to easily use it in the view files using route('name')
 
