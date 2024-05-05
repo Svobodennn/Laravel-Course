@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Test;
 use App\Http\Controllers\RequestLibrary;
+use App\Http\Controllers\FormValidations;
 
 Route::get('/contact',[RequestLibrary::class,'contact']);
 Route::post('/contact',[RequestLibrary::class,'post'])->name('contact.post');
@@ -42,3 +43,6 @@ Route::prefix('/electronics')->group(function (){ // mounting
 Route::view('/','welcome'); // returning only the view
 //Route::view('/profile','pages.welcome',$data:array);
 
+
+Route::get('/register',[FormValidations::class,'index']);
+Route::post('/register',[FormValidations::class,'post'])->name('register.post');
